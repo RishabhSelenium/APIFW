@@ -16,7 +16,7 @@ public class TC9_GetParticular_emp {
 //	    Response rs = http.getMethod("Employee_get",3);
 //
 //	    System.out.println("this is test case 8---------");
-//	    System.out.println("status code is--");
+	    System.out.println("status code is--");
 //	    System.out.println(rs.statusCode());
 //	    System.out.println(rs.asString());
 //	  
