@@ -1,0 +1,6 @@
+{
+    "user": "{{user}}",
+    "title": "this is the todo's Title",
+    "user_id": "{{user_id}}",
+    "status": "completed"
+}

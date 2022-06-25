@@ -1,0 +1,8 @@
+{
+        "field": "user",
+        "message": "must exist"
+    },
+    {
+        "field": "user_id",
+        "message": "can't be blank, is not a number"
+    }

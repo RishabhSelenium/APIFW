@@ -1,0 +1,7 @@
+{
+    "post":"This is the user post",
+    "post_id": "{{post_id}}",
+    "name": "post Name",
+    "email": "{{email}}",
+    "body": "this is the body of User Comment"
+}

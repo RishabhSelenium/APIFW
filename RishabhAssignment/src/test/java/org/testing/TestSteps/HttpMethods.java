@@ -1,6 +1,7 @@
 package org.testing.TestSteps;
 
-import static io.restassured.RestAssured.*; // iska explanation
+// iska explanation
+import static io.restassured.RestAssured.given;
 
 import java.util.Properties;
 
@@ -8,12 +9,12 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 public class HttpMethods {
-	
-	
+
+
 	Properties prObject;
 	public HttpMethods(Properties prObject) { // creating a cunstrutor to fetch the UriKey from propertiesFile
-	
-		this.prObject=prObject; // local value of prObject to global 
+
+		this.prObject=prObject; // local value of prObject to global
 	}
 
 	public Response PostMethod(String uriKey, String bodyData)
@@ -36,5 +37,5 @@ public class HttpMethods {
 		System.out.println(res.body().asPrettyString());
 		return res;
 	}
-	
+
 }

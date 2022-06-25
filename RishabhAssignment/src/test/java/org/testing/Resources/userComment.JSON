@@ -1,0 +1,12 @@
+{
+       "field": "post",
+       "message": "must exist"
+   },
+   {
+       "field": "post_id",
+       "message": "can't be blank, is not a number"
+   },
+   {
+       "field": "email",
+       "message": "can't be blank, is invalid"
+   }

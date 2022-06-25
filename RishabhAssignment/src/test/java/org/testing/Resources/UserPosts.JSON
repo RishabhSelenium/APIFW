@@ -1,4 +1,7 @@
 {
-    "title": "thi is title to post",
-    "body": "this is the body of post"
+    "user":"{{user}}",
+    "user_id":"{{user_id}}",
+    "title": "thi is title to post19",
+    "body": "this is the body of post19"
+    
 }
