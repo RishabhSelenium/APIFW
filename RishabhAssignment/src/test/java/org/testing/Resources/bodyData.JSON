@@ -1,0 +1,7 @@
+{      
+        "name": "{{name}}",
+        "email": "jonty@harvey.info",
+        "gender": "male",
+        "status": "active",
+        "id":"{{id}}"
+}

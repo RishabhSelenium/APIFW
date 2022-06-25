@@ -11,7 +11,8 @@ import io.restassured.response.Response;
 
 public class TC01_GetData {
 
-	
+
+	// get method for Users
 public void testCase() throws IOException {
 Properties p = LoadPropertiesFiles.hadnlePropertieFile("../APIFW/URI.properties");
 HTTPMethods hm = new HTTPMethods(p);
