@@ -1,12 +1,7 @@
 {
-       "field": "post",
-       "message": "must exist"
-   },
-   {
-       "field": "post_id",
-       "message": "can't be blank, is not a number"
-   },
-   {
-       "field": "email",
-       "message": "can't be blank, is invalid"
-   }
+    "post":"This is user's post",
+    "post_id": "{{post_id}}",
+    "name": "fb post",
+    "email": "{{email}}",
+    "body": "this is the post's body"
+}

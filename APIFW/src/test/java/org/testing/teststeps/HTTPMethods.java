@@ -72,9 +72,7 @@ public Response getMethod(String uriKey, String endPoint)
 		.when()
 		.get(uri);
 		return rs;
-		
-	
-}
+	}
 	
 public Response getAllMethod(String uriKey)
 {
