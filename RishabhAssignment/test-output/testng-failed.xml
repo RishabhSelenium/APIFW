@@ -5,7 +5,7 @@
     <classes>
       <class name="org.testing.TestScript.TestCases">
         <methods>
-          <include name="userFieldsMissing"/>
+          <include name="TC02_"/>
         </methods>
       </class> <!-- org.testing.TestScript.TestCases -->
     </classes>

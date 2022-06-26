@@ -40,18 +40,30 @@ public class HttpMethods {
 	
 	public Response getMethod(String uriKey, String endPoint)
 	{
+//		String uri = prObject.getProperty(uriKey)+"/"+endPoint;
+//		Response rs =
+//		given()
+//		.headers(
+//	              "Authorization",
+//	              "Bearer " + "3f2c904d827497149daaab07f336fb946ab9d18dc4daa3a55f5bc334f48dc29f",
+//	              "Content-Type",
+//	              ContentType.JSON,
+//	              "Accept",
+//	              ContentType.JSON)
+//		.when()
+//		.get(uri);
 		String uri = prObject.getProperty(uriKey)+"/"+endPoint;
 		Response rs =
-		given()
-		.headers(
-	              "Authorization",
-	              "Bearer " + "3f2c904d827497149daaab07f336fb946ab9d18dc4daa3a55f5bc334f48dc29f",
-	              "Content-Type",
-	              ContentType.JSON,
-	              "Accept",
-	              ContentType.JSON)
-		.when()
-		.get(uri);
+				 given()
+				.headers(
+			              "Authorization",
+			              "Bearer " + "3f2c904d827497149daaab07f336fb946ab9d18dc4daa3a55f5bc334f48dc29f",
+			              "Content-Type",
+			              ContentType.JSON,
+			              "Accept",
+			              ContentType.JSON)
+				.when()
+				.get(uri).prettyPeek().then().extract().response();
 		return rs;
 	}
 
