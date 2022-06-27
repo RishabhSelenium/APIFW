@@ -134,14 +134,16 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   <h3>Steps to run TestCase</h3>
   
   1. Navigae to ```com.testing.Resources``` package under ```src/test/java/```
-  2. Open ```createUser.JSON``` file and change **name** value and **email** value
-  3. Naigate to ```Runner``` package and open ```ApiTestCases.java```
+  2. Naigate to ```Runner``` package and open ```ApiTestCases.java```
+  3. Change **name** and **email** on line no. **33** and **34**.
   4. Set ```Test_001_createUser()``` as ```@Test(enabled=true)```
   5. Run ```ApiTestCases.java``` file as testNG
   
   **This test case will create new user, post, comment and todo**
   
-  </h3>To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all.</h3>
+  <h4>Similarly you have to change the email and name to execute Test_002_sameEmailAddress()
+  
+  <h3>To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all.</h3>
   
  
   <h2>Asserting Response code</h2>
@@ -151,6 +153,10 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   <h2>Asserting ErrorMessage</h2>
   
   ```validateErroMessage()``` method from ```TestCaseValidate.java``` class is used to validate error code
+
+  <h2>Test Report</h2>
+
+  To get the test report navigate to **/RishabhAssignment/test-output/emailable-report.html**
   
   
   
@@ -158,11 +164,3 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   <img width="796" alt="Screenshot 2022-06-27 at 10 13 21 PM" src="https://user-images.githubusercontent.com/37605701/176001768-8e38ee0d-9e69-4b42-ac82-eef52a5886b9.png">
 
   
-  
-  
-  
-
-
-
-
-
