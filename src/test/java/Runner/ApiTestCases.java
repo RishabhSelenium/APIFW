@@ -34,7 +34,7 @@ public class ApiTestCases {
 		String email= "apple99@gmail.com";
 		
 		Response rs =tc.MethodUser(name, email);
-	    UserId = rs.jsonPath().get("id").toString(); // user id 
+	        UserId = rs.jsonPath().get("id").toString(); // user id 
 	  	String UserName = rs.jsonPath().get("name").toString(); // user name 
 	  	String userEmail = rs.jsonPath().get("email").toString();// user email id
 	  	String postID = tc.methodPost(UserId,UserName);
@@ -68,20 +68,20 @@ public class ApiTestCases {
 		
 		// provide same email as Test_001_createUser()
 		multiple = JsonVariable.jsonVariableReplacement(multiple, "email", "apple99@gmail.com" );
-        HttpMethods http = new HttpMethods(prObject); 
-        System.out.println(multiple);
-        Response rs = http.PostMethod("users_Post", multiple ); //calling post method
-        TestCaseValidate.validateSTATUS(rs);
-        JsonPath jp = rs.jsonPath();
-        System.out.println(jp.get("message")); 
+                HttpMethods http = new HttpMethods(prObject); 
+                System.out.println(multiple);
+                Response rs = http.PostMethod("users_Post", multiple ); //calling post method
+                TestCaseValidate.validateSTATUS(rs);
+                JsonPath jp = rs.jsonPath();
+                System.out.println(jp.get("message")); 
 	    
 
         if (rs.statusCode()==422)
 	      {
-		     String  errorMessage = rs.jsonPath().get("message").toString();
-		     TestCaseValidate.validateErroMessage(errorMessage, "[has already been taken]");// Validating the errorMessage
+	           String  errorMessage = rs.jsonPath().get("message").toString();
+	           TestCaseValidate.validateErroMessage(errorMessage, "[has already been taken]");// Validating the errorMessage
 	      }        
-      System.out.println("***** end of test case 02 *****");
+                System.out.println("***** end of test case 02 *****");
 
         
 	}
@@ -92,16 +92,16 @@ public class ApiTestCases {
 	
 		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
 		String data =  LoadJsonFile.handleJsonFile(jsonPath+"invalidEmail.JSON"); // Loading JSON file 
-        HttpMethods http = new HttpMethods(prObject); // this require the object of property file
+                HttpMethods http = new HttpMethods(prObject); // this require the object of property file
 	  	Response rs = http.PostMethod("users_Post", data ); // Json file read for boddy data
 	  	TestCaseValidate.validateSTATUS(rs);
 	  	if (rs.statusCode()==422)
 	      {
-		     String  errorMessage = rs.jsonPath().get("message").toString();
-		     TestCaseValidate.validateErroMessage(errorMessage, "[is invalid]");// Validating the errorMessage
+	           String  errorMessage = rs.jsonPath().get("message").toString();
+		   TestCaseValidate.validateErroMessage(errorMessage, "[is invalid]");// Validating the errorMessage
 	      }
 
-	    System.out.println("****** end of test case 03 ******");
+	        System.out.println("****** end of test case 03 ******");
 
 	}
 	
@@ -111,9 +111,9 @@ public class ApiTestCases {
 	{
 
 		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
-        HttpMethods http = new HttpMethods(prObject); // this require the object of property file
-      	Response rs = http.getMethod("get_Entries", UserId );
-      	TestCaseValidate.validateSTATUS(rs);   //// Validating the ResponseCode
+                HttpMethods http = new HttpMethods(prObject); // this require the object of property file
+          	Response rs = http.getMethod("get_Entries", UserId );
+        	TestCaseValidate.validateSTATUS(rs);   //// Validating the ResponseCode
 	  	System.out.println("***** end of test case 04 *****");
 
  	}
