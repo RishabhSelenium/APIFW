@@ -80,9 +80,18 @@ ApiTestCases.java
 > We are using this class to run our test cases. We implemented TestNG annotations to run our test cases. This class contains public void ```Test_001_createUser()```, ```Test_002_sameEmailAddress()```, ```Test_003_invalidEmail()``` and ```Test_004_fetchEntries()```. In this class we have called the methods from ```TestCase01```.
 
 
+<h2>Installation</h2>
 
+<h3>Steps to follow to setup API automation in local system:</h3>
 
+<h4>Install Java: [Skip this step if already installed]</h4>
 
+<h4>Check if Java is installed.</h4>
+
+* In terminal enter java -version to check if java is installed in the system.
+* In terminal enter javac -version to check if java compiler is installed in the system.
+* Any version of java greater than 1.8 is supported.
+* Install java development kit if not available.
 
 
 
