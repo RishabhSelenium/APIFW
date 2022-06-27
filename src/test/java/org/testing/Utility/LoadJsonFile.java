@@ -17,8 +17,8 @@ public class LoadJsonFile {
 		FileReader fr = new FileReader(f);
 		JSONTokener js = new JSONTokener(fr);
 		JSONObject jb = new JSONObject(js);
-        return jb.toString();
-		}
+                return jb.toString();
+	}
 
 
 }
