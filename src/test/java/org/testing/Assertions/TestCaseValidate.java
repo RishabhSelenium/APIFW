@@ -31,11 +31,10 @@ public class TestCaseValidate {
 	
 	public static void validateErroMessage(String errorMessage, String expectedMsg)
 	
-	{
-	    Assert.assertEquals(errorMessage, expectedMsg );
-
-		
-	}
+	      {
+	            Assert.assertEquals(errorMessage, expectedMsg );
+	      
+	      }
 	
 	
 	
