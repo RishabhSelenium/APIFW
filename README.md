@@ -49,7 +49,7 @@ TestCaseValidate.java
 > Thi Java class is implemented to validate the Status code and Error message of Tests. We have ```validateErroMessage()``` and ```validateSTATUS``` in this class
 
 **2.com.testing.Resources**
-> This package contains all the JSON files we are using 
+> This package contains all the JSON files we are using to perfor the test cases 
 
 **3.com.testing.TestMethods**
 TestCase01.java
@@ -58,6 +58,7 @@ TestCase01.java
 **4.com.testing.TestSteps**
 HttpMethods.Java
 > In this class we created methods to POST and GET the request
+> personal access token is passed in headers of POST and GET methods
 
 **5.com.testing.Utility**
 JsonParsing.java
@@ -141,7 +142,12 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   
   **This test case will create new user, post, comment and todo**
   
-  **To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all. 
+  </h3>To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all.</h3>
+  
+ 
+  <h2>Asserting Response code</h2>
+  
+  
 
 
 
