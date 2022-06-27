@@ -141,7 +141,8 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   
   **This test case will create new user, post, comment and todo**
   
-  <h4>Similarly you have to change the email and name to execute Test_002_sameEmailAddress()
+  <h4>Note</h4>
+  You have to put same email of ```Test_001_createUser()``` and different name to execute ```Test_002_sameEmailAddress()```
   
   <h3>To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all.</h3>
   
