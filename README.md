@@ -108,7 +108,7 @@ ApiTestCases.java
   
 * url : Url
   
-<h3>Setup project in Eclipse:<.h3>
+<h3>Setup project in Eclipse:</h3>
 
 * File -> Open Project from File System -> Browse the folder and open the cloned project.
 * Open -> Help -> Eclipse Marketplace -> Search testng -> Install Testng for eclipse plugin -> Restart eclipse.
@@ -126,5 +126,19 @@ In case of error in all import statements
   - Click on src -> main -> java ->right click -> build path -> use as source folder
   - Refresh the project
   ```
+  
+  <h1>Example Test</h1>
+  
+Now, let's get started with the 1st test case – : - Create a new user, post, comment and todo. A test for success scenario and also for when some mandatory fields are missing.
+  
+  <h3>Steps to run TestCase</h3>
+  1. Navigae to ```com.testing.Resources``` package under ```src/test/java/```
+  2. Open ```createUser.JSON``` file and change the *name* value and *email* value
+  3. Naigate to ```Runner``` package and open ```ApiTestCases.java```
+  4. ```Test_001_createUser()``` in this class
+  5. 
+
+
+
 
 
