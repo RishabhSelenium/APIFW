@@ -93,10 +93,38 @@ ApiTestCases.java
 * Any version of java greater than 1.8 is supported.
 * Install java development kit if not available.
 
+<h4>Install Eclipse / Any other latest IDE [Skip this step if already installed]:</h4>
+
+<h4>Install eclipse photon if not available.</h4>
+
+* Download eclipse installer.
+* Run eclipse installer.
+* Select install eclipse for java developers.
+* Open workbench.
+
+<h4>Get Code base:</h4>
+
+<h4>Clone Project<h4>
+  
+* url : Url
+  
+<h3>Setup project in Eclipse:<.h3>
+
+* File -> Open Project from File System -> Browse the folder and open the cloned project.
+* Open -> Help -> Eclipse Marketplace -> Search testng -> Install Testng for eclipse plugin -> Restart eclipse.
+* Maven will be available by default, with eclipse. To check, right click on project -> should have an option called maven.
 
 
-
-
-
+```
+  Possible issues:
+In case of error in pom.xml file ->Cannot read lifecycle mapping metadata for artifact org.apache.maven.plugins:mav
+  - In terminal open Users/<profile_name>/.m2
+  - Run rm -r repository
+  - Right click on project -> Update project
+In case of error in all import statements
+  - Click on src/main/java folder -> build path -> remove from build path
+  - Click on src -> main -> java ->right click -> build path -> use as source folder
+  - Refresh the project
+  ```
 
 
