@@ -16,7 +16,7 @@ import io.restassured.response.Response;
 
 public class ApiTestCases {
 	TestCase01 tc = new TestCase01();
-    static String jsonPath ="../RishabhAssignment/src/test/java/org/testing/Resources/";
+    static String jsonPath ="../APIFW/src/test/java/org/testing/Resources/";
     String UserId; // Saved UserId in global Variable to use this in Test_004_fetchEntrie()
 	
     
@@ -30,8 +30,8 @@ public class ApiTestCases {
 	{	
 		
 //		Pass userName and email in method parameters to run the test
-		String name="R89";
-		String email= "apple89@gmail.com";
+		String name="R99";
+		String email= "apple99@gmail.com";
 		
 		Response rs =tc.MethodUser(name, email);
 	    UserId = rs.jsonPath().get("id").toString(); // user id 
@@ -56,34 +56,41 @@ public class ApiTestCases {
 	
 //	create two users with the same email address.
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public static void Test_002_sameEmailAddress() throws IOException
 	
 	{
-		Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties");//Load Properties file to get the URI 
+		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
 		String data =  LoadJsonFile.handleJsonFile(jsonPath+"createUser.JSON"); // Loading JSON file 
-		String NameElement = "Hart"; //provide any new name 
+		String NameElement = "Harry"; //provide any new name 
 		String multiple = JsonVariable.jsonVariableReplacement(data, "name", NameElement);//replacing value of name in JSON
+		
+		
+		// provide same email as Test_001_createUser()
+		multiple = JsonVariable.jsonVariableReplacement(multiple, "email", "apple99@gmail.com" );
         HttpMethods http = new HttpMethods(prObject); 
+        System.out.println(multiple);
         Response rs = http.PostMethod("users_Post", multiple ); //calling post method
         TestCaseValidate.validateSTATUS(rs);
         JsonPath jp = rs.jsonPath();
-        System.out.println(jp.get("message"));        
+        System.out.println(jp.get("message")); 
+	    
+
         if (rs.statusCode()==422)
 	      {
 		     String  errorMessage = rs.jsonPath().get("message").toString();
 		     TestCaseValidate.validateErroMessage(errorMessage, "[has already been taken]");// Validating the errorMessage
 	      }        
-        System.out.println("***** end of test case 02 *****");
+      System.out.println("***** end of test case 02 *****");
 
         
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void Test_003_invalidEmail() throws IOException
 	{
 	
-		Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties");//Load Properties file to get the URI 
+		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
 		String data =  LoadJsonFile.handleJsonFile(jsonPath+"invalidEmail.JSON"); // Loading JSON file 
         HttpMethods http = new HttpMethods(prObject); // this require the object of property file
 	  	Response rs = http.PostMethod("users_Post", data ); // Json file read for boddy data
@@ -99,11 +106,11 @@ public class ApiTestCases {
 	}
 	
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void Test_004_fetchEntries() throws IOException
 	{
 
-		Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties");//Load Properties file to get the URI 
+		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
         HttpMethods http = new HttpMethods(prObject); // this require the object of property file
       	Response rs = http.getMethod("get_Entries", UserId );
       	TestCaseValidate.validateSTATUS(rs);   //// Validating the ResponseCode

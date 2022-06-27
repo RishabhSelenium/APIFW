@@ -18,8 +18,8 @@ public class TestCase01 {
     public Response MethodUser(String UserName, String email) throws IOException
       {
  	    
- 	    Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties");//Load Properties file to get the URI 
-		String data =  LoadJsonFile.handleJsonFile("../RishabhAssignment/src/test/java/org/testing/Resources/createUser.JSON"); // Loading JSON file 
+ 	    Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
+		String data =  LoadJsonFile.handleJsonFile("../APIFW/src/test/java/org/testing/Resources/createUser.JSON"); // Loading JSON file 
         HttpMethods http = new HttpMethods(prObject); // This require the object of property file
 	    String multiple = JsonVariable.jsonVariableReplacement(data, "name", UserName); //replacing value of name in JSON
 	    String multiple1 = JsonVariable.jsonVariableReplacement(multiple, "email", email);//replacing value of email in JSON
@@ -40,8 +40,8 @@ public class TestCase01 {
 	public String methodPost(String UserId, String UserName ) throws IOException 
 	
 	{
-		Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties");//Load Properties file to get the URI 
-		String data =  LoadJsonFile.handleJsonFile("../RishabhAssignment/src/test/java/org/testing/Resources/UserPosts.json"); // Loading JSON file 
+		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties");//Load Properties file to get the URI 
+		String data =  LoadJsonFile.handleJsonFile("../APIFW/src/test/java/org/testing/Resources/UserPosts.json"); // Loading JSON file 
 		HttpMethods http = new HttpMethods(prObject); // this require the object of property file
 		String multiple = JsonVariable.jsonVariableReplacement(data, "user", UserName); //replacing value of user in JSON
 		String multiple1 = JsonVariable.jsonVariableReplacement(multiple, "user_id", UserId );// replacing value of user_id on JSON
@@ -62,8 +62,8 @@ public class TestCase01 {
         public void methodComment(String userEmail, String postID) throws IOException
 	
 	{
-		Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties"); //Load Properties file to get the URI 
-		String data =  LoadJsonFile.handleJsonFile("../RishabhAssignment/src/test/java/org/testing/Resources/userComment.json"); // Loading JSON file 
+		Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties"); //Load Properties file to get the URI 
+		String data =  LoadJsonFile.handleJsonFile("../APIFW/src/test/java/org/testing/Resources/userComment.json"); // Loading JSON file 
 		HttpMethods http = new HttpMethods(prObject); // this require the object of property file
         String multiple = JsonVariable.jsonVariableReplacement(data, "email", userEmail); //replacing value of email in JSON
 		String multiple1 = JsonVariable.jsonVariableReplacement(multiple, "post_id", postID ); //replacing value of post_id in JSON
@@ -82,8 +82,8 @@ public class TestCase01 {
         public void methodTodo(String UserName, String UserId) throws IOException
     	
     {
-      	Properties prObject = LoadPropertiesFile.handlePropertyFile("../RishabhAssignment/src/URI.properties"); //Load Properties file to get the URI 
-     	String data =  LoadJsonFile.handleJsonFile("../RishabhAssignment/src/test/java/org/testing/Resources/userTodo.json"); // Loading JSON file
+      	Properties prObject = LoadPropertiesFile.handlePropertyFile("../APIFW/src/URI.properties"); //Load Properties file to get the URI 
+     	String data =  LoadJsonFile.handleJsonFile("../APIFW/src/test/java/org/testing/Resources/userTodo.json"); // Loading JSON file
      	HttpMethods http = new HttpMethods(prObject); 
         String multiple = JsonVariable.jsonVariableReplacement(data, "user", UserName);//replacing value of user in JSON
      	String multiple1 = JsonVariable.jsonVariableReplacement(multiple, "user_id", UserId );//replacing value of user_id in JSON

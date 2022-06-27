@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.testing.TestScript.TestCases">
+      <class name="Runner.ApiTestCases">
         <methods>
-          <include name="TC02_"/>
+          <include name="Test_002_sameEmailAddress"/>
         </methods>
-      </class> <!-- org.testing.TestScript.TestCases -->
+      </class> <!-- Runner.ApiTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
