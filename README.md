@@ -147,6 +147,16 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
  
   <h2>Asserting Response code</h2>
   
+  ```validateSTATUS``` method from ```TestCaseValidate.java``` class is used to validate the status code
+  
+  <h2>Asserting ErrorMessage</h2>
+  
+  ```validateErroMessage()``` method from ```TestCaseValidate.java``` class is used to validate error code
+  
+  
+  
+  
+  
   
 
 
