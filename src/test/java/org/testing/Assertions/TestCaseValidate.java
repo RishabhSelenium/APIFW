@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 
 public class TestCaseValidate {
 	
-	public void validateSTATUS(Response rs)
+	public static void validateSTATUS(Response rs)
 	{
 		
 		int userResponse_STATUS = rs.getStatusCode();
@@ -26,6 +26,14 @@ public class TestCaseValidate {
 		    Assert.assertEquals(userResponse_STATUS, 200, "Success TestCases");
 
 		}
+		
+	}
+	
+	public static void validateErroMessage(String errorMessage, String expectedMsg)
+	
+	{
+	    Assert.assertEquals(errorMessage, expectedMsg );
+
 		
 	}
 	

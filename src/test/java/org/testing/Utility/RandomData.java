@@ -3,6 +3,8 @@ package org.testing.Utility;
 import java.util.Random;
 
 public class RandomData {
+	
+	// Method to generate RandomData
 	public static String randomvalue()
 	{
 

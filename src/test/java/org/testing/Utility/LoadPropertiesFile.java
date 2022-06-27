@@ -7,6 +7,8 @@ import java.util.Properties;
 
 public class LoadPropertiesFile {
 
+	
+	// Method to load property files
 public static Properties handlePropertyFile(String path) throws IOException
 {
 	File f = new File(path);

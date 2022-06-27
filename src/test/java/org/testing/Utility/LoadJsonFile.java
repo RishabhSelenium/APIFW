@@ -9,6 +9,8 @@ import org.json.JSONTokener;
 
 public class LoadJsonFile {
 
+	
+	// Method to load Json
 	public static String handleJsonFile(String path) throws FileNotFoundException
 	{
 		File f = new File(path);
