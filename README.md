@@ -20,12 +20,28 @@ src/test/java/ is the actual test package and contains multiple sub package deta
 ```
 src/test/Java
 - com.testing.Assertions
+  - TestCaseValidate.java
 - com.testing.Resources
+  - createUser.JSON
+  - invalidEmail.JSON
+  - userComment.JSON
+  - UserPosts.JSON
+  - userTodo.JSON
 - com.testing.TestMethods
+  - Testcase01.java
 - com.testing.TestSteps
+  - HttpMethods.Java
 - com.testing.Utility
+  - JsonParsing.java
+  - JsonVariable.java
+  - LoadJson.java
+  - LoadPropertiesFile.java
+  - RandomData.java
 - Runner
+  - ApiTestCases.java
+  - SeleniumTestCase.java
 ```
+
 
 
 
