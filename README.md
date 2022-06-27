@@ -141,21 +141,21 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   
   **This test case will create new user, post, comment and todo**
   
-  <h4>Note</h4>
-  You have to put same email of ```Test_001_createUser()``` and different name to execute ```Test_002_sameEmailAddress()```
+  <h2>Please Note</h2>
   
-  <h3>To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all.</h3>
+  * You have to put same email of ```Test_001_createUser()``` and different name to execute ```Test_002_sameEmailAddress()```
+  * To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all.</h3>
   
  
-  <h2>Asserting Response code</h2>
+  <h3>Asserting Response code</h3>
   
   ```validateSTATUS``` method from ```TestCaseValidate.java``` class is used to validate the status code
   
-  <h2>Asserting ErrorMessage</h2>
+  <h3>Asserting ErrorMessage</h3>
   
   ```validateErroMessage()``` method from ```TestCaseValidate.java``` class is used to validate error code
 
-  <h2>Test Report</h2>
+  <h3>Test Report</h3>
 
   To get the test report navigate to **/RishabhAssignment/test-output/emailable-report.html**
   
