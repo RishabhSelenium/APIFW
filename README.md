@@ -12,11 +12,6 @@ REST Assured is a Java DSL for simplifying testing of REST based services built 
 This project uses a standard Maven Java project with standard java folder structure and POM.xml
 
 
-<h3>Properties</h3>
-
-src/main/resources/constants.properties is a simple constants properties file to store various constants like application URL
-
-
 <h3>Test Package</h3>
 
 src/test/java/ is the actual test package and contains multiple sub package details are mentioned in the following section holds all test classes (TestNG) related to restfulbooker application
@@ -50,14 +45,14 @@ src/test/Java
 **1.com.testing.Assertions**
 
 TestCaseValidate.java
-> Thi Java class is implemented to validate the Status code and Error message of Tests. We have ```validateErroMessage()``` and ```validateSTATUS``` in this class
+> Thi Java class is implemented to validate the Status code and Error message of Tests. We have ```validateErroMessage()``` and ```validateSTATUS()``` in this class
 
 **2.com.testing.Resources**
-> This package contains all the JSON files we are using to perfor the test cases 
+> This package contains all the JSON files we are using to perform the test cases 
 
 **3.com.testing.TestMethods**
 TestCase01.java
-> In this Java class we made methods to create user, post, comment, and todo
+> In this Java class we made methods to create post, comment, and todo
 
 **4.com.testing.TestSteps**
 HttpMethods.Java
@@ -158,6 +153,10 @@ Now, let's get started with the 1st test case – : - Create a new user, post, c
   ```validateErroMessage()``` method from ```TestCaseValidate.java``` class is used to validate error code
   
   
+  
+  
+  <img width="796" alt="Screenshot 2022-06-27 at 10 13 21 PM" src="https://user-images.githubusercontent.com/37605701/176001768-8e38ee0d-9e69-4b42-ac82-eef52a5886b9.png">
+
   
   
   
