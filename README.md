@@ -127,16 +127,21 @@ In case of error in all import statements
   - Refresh the project
   ```
   
-  <h1>Example Test</h1>
+  <h1>Example</h1>
   
 Now, let's get started with the 1st test case – : - Create a new user, post, comment and todo. A test for success scenario and also for when some mandatory fields are missing.
   
   <h3>Steps to run TestCase</h3>
+  
   1. Navigae to ```com.testing.Resources``` package under ```src/test/java/```
-  2. Open ```createUser.JSON``` file and change the *name* value and *email* value
+  2. Open ```createUser.JSON``` file and change **name** value and **email** value
   3. Naigate to ```Runner``` package and open ```ApiTestCases.java```
-  4. ```Test_001_createUser()``` in this class
-  5. 
+  4. Set ```Test_001_createUser()``` as ```@Test(enabled=true)```
+  5. Run ```ApiTestCases.java``` file as testNG
+  
+  **This test case will create new user, post, comment and todo**
+  
+  **To run all 4 test cases make sure ```@Test(enabled=true)``` is true for all. 
 
 
 
