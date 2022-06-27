@@ -40,7 +40,51 @@ src/test/Java
 - Runner
   - ApiTestCases.java
   - SeleniumTestCase.java
+
 ```
+
+**1.com.testing.Assertions**
+
+TestCaseValidate.java
+> Thi Java class is implemented to validate the Status code and Error message of Tests. We have ```validateErroMessage()``` and ```validateSTATUS``` in this class
+
+**2.com.testing.Resources**
+> This package contains all the JSON files we are using 
+
+**3.com.testing.TestMethods**
+TestCase01.java
+> In this Java class we made methods to create user, post, comment, and todo
+
+**4.com.testing.TestSteps**
+HttpMethods.Java
+> In this class we created methods to POST and GET the request
+
+**5.com.testing.Utility**
+JsonParsing.java
+> This Java class is implemented to Parse the JSON
+
+JsonVariable.java
+> This Java will replace the value of key in JSON
+
+LoadJson.java
+> This class is used to load JSON file
+
+> LoadPropertiesFile.java
+This class is used to load Properties file where all the URI links are kept
+
+> RandomData.java
+This class is used to generate random Id's
+
+**6.Runner**
+ApiTestCases.java
+> We are using this class to run our test cases. We implemented TestNG annotations to run our test cases. This class contains public void ```Test_001_createUser()```, ```Test_002_sameEmailAddress()```, ```Test_003_invalidEmail()``` and ```Test_004_fetchEntries()```. In this class we have called the methods from ```TestCase01```.
+
+
+
+
+
+
+
 
 
 
