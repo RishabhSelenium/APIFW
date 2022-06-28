@@ -73,7 +73,6 @@ public class ApiTestCases {
                 Response rs = http.PostMethod("users_Post", multiple ); //calling post method
                 TestCaseValidate.validateSTATUS(rs);
                 JsonPath jp = rs.jsonPath();
-                System.out.println(jp.get("message")); 
 	    
 
         if (rs.statusCode()==422)
